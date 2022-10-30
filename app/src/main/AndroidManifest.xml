@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.matchymatchproject.mirassociationdanny.matchymatch">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_matchymatch"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name=".Utils.CustomContentProvider"
+            android:authorities="com.matchymatchproject.mirassociationdanny.matchymatch"
+            android:exported="false" />
+        <activity
+            android:name=".MainPuzzleActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CustomMainActivity"
+            android:screenOrientation="landscape" />
+        <!-- Declare  Alarm Sound Service here -->
+        <service
+            android:name=".Utils.AlarmSoundService"
+            android:stopWithTask="true" />
+
+        <activity
+            android:name=".CustomMainPuzzleActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ParrotActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".CustomMainPuzzlePlayActivity"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>

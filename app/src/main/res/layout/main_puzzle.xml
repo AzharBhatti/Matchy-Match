@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/parent"
+        android:background="@drawable/sheep_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/image_one"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        app:layout_constraintEnd_toStartOf="@+id/image_two"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/image_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/image_two"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:background="@drawable/image_box"
+        app:layout_constraintEnd_toStartOf="@+id/image_three"
+        app:layout_constraintStart_toEndOf="@id/image_one"
+        app:layout_constraintTop_toTopOf="@id/image_one" />
+    <ImageView
+        android:id="@+id/image_three"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:background="@drawable/image_box"
+        app:layout_constraintEnd_toStartOf="@+id/image_four"
+        app:layout_constraintStart_toEndOf="@id/image_two"
+        app:layout_constraintTop_toTopOf="@id/image_one" />
+    <ImageView
+        android:id="@+id/image_four"
+        app:layout_constraintEnd_toStartOf="@+id/image_five"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:background="@drawable/image_box"
+        app:layout_constraintStart_toEndOf="@id/image_three"
+        app:layout_constraintTop_toTopOf="@id/image_one" />
+
+    <ImageView
+        android:id="@+id/image_five"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:background="@drawable/image_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_four"
+        app:layout_constraintTop_toTopOf="@id/image_one" />
+    <ImageView
+        android:id="@+id/image_six"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/image_one"
+        app:layout_constraintTop_toBottomOf="@+id/image_one"
+        android:background="@drawable/image_box"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height" />
+    <ImageView
+        android:id="@+id/image_seven"
+        app:layout_constraintEnd_toStartOf="@+id/image_eight"
+        app:layout_constraintStart_toEndOf="@+id/image_six"
+        app:layout_constraintTop_toTopOf="@+id/image_six"
+        android:background="@drawable/image_box"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height" />
+    <ImageView
+        android:id="@+id/image_eight"
+        app:layout_constraintEnd_toStartOf="@+id/image_nine"
+        app:layout_constraintStart_toEndOf="@+id/image_seven"
+        app:layout_constraintTop_toTopOf="@+id/image_six"
+        android:background="@drawable/image_box"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height" />
+    <ImageView
+        android:id="@+id/image_nine"
+        app:layout_constraintEnd_toStartOf="@+id/image_ten"
+        app:layout_constraintStart_toEndOf="@+id/image_eight"
+        app:layout_constraintTop_toTopOf="@+id/image_six"
+        android:background="@drawable/image_box"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height" />
+
+    <ImageView
+        android:id="@+id/image_ten"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:background="@drawable/image_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_nine"
+        app:layout_constraintTop_toTopOf="@+id/image_six" />
+
+    <ImageView
+        android:id="@+id/image_puzzle_one"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/image_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_puzzle_two"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_puzzle_two"
+        android:layout_width="@dimen/puzzle_box_width"
+        android:layout_height="@dimen/puzzle_box_height"
+        android:layout_marginEnd="120dp"
+        android:background="@drawable/image_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_puzzle_one"
+        app:layout_constraintTop_toTopOf="@+id/image_puzzle_one" />
+
+
+        <ImageView
+            android:id="@+id/homebtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@mipmap/homebutton"
+            tools:layout_editor_absoluteX="651dp"
+            tools:layout_editor_absoluteY="321dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_ten"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</android.support.constraint.ConstraintLayout>
